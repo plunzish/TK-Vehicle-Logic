@@ -1,0 +1,8 @@
+name: VehicleLogic
+version: '${project.version}'
+main: eu.monsbot.turbokarts.vehiclelogic.VehicleLogic
+api-version: '1.20'
+commands:
+  tkvldebug:
+    description: TurbokartsVehicleLogicDebugCommand
+    usage: /tkvldebug
