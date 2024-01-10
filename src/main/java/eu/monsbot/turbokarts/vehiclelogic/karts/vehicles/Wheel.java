@@ -1,31 +1,16 @@
-package eu.monsbot.turbokarts.vehiclelogic.kartManagement;
+package eu.monsbot.turbokarts.vehiclelogic.karts.vehicles;
 
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.ItemDisplay;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.util.Transformation;
-import org.bukkit.util.Vector;
 import org.joml.AxisAngle4f;
 import org.joml.Vector3f;
 
-public class Wheel {
+public class Wheel extends AbstractWheel {
     // Core
     private final ItemDisplay entity;
     TKVehicle parent;
-
-    // Display
-    private final ItemStack item;
-    private final Vector3f scale;
-    private final Vector3f translation;
-
-    // Rolling
-    private final Vector3f rotationAxis;
-    private final float radius; //in blocks
-    private final boolean rotateClockwise;
-
-    // Steering
-    private final boolean canSteer;
-    private final Vector3f steeringAxis;
 
     public Wheel(TKVehicle parent, ItemStack item, Vector3f translation, Vector3f scale, Vector3f rotationAxis, float radius, boolean rotateClockwise, boolean canSteer, Vector3f steeringAxis) {
         ItemDisplay entity = (ItemDisplay) parent.getMainEntity().getWorld().spawnEntity(parent.getLocation(), EntityType.ITEM_DISPLAY);
